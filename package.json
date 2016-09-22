@@ -1,0 +1,24 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "Example node module with unit test and CI",
+  "author": "Thanh Nguyen <thanhnt@greenglobal.vn>",
+  "private": false,
+  "scripts": {
+    "start": "node .",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --recursive --timeout 5000"
+  },
+  "dependencies": {
+    "lodash": "^4.16.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.4.0",
+    "faker": "^3.1.0",
+    "istanbul": "^0.4.5",
+    "js-beautify": "^1.6.4",
+    "mocha": "^3.0.2",
+    "rosie": "^1.6.0",
+    "sinon": "^1.17.6"
+  }
+}
