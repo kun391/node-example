@@ -17,7 +17,7 @@
   "scripts": {
     "start": "node .",
     "lint": "eslint .",
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -25,6 +25,7 @@
     "eslint": "^3.4.0",
     "istanbul": "^0.4.5",
     "js-beautify": "^1.6.4",
+    "lab": "^11.1.0",
     "mocha": "^3.0.2",
     "sinon": "^1.17.6"
   }
