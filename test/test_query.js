@@ -56,6 +56,19 @@ describe('function findById working ok', () => {
     assert.equal(user, null);
     done();
   });
+  it('return no data with hasOwnProperty false', (done) => {
+    let x = {}.hasOwnProperty;
+    sinon.stub(x, 'call', (data ,i) => {
+      return false;
+    });
+    let user = query.findById('57e251e1d08c1dbfdf220a07');
+    assert.typeOf({
+      user: 'chai'
+    }, 'object');
+    assert.equal(user, null);
+    x.call.restore();
+    done();
+  });
 });
 
 describe('function findById working ok', () => {
@@ -67,7 +80,7 @@ describe('function findById working ok', () => {
   });
   it('return no data', (done) => {
     sinon.stub(query, 'readData', (file) => {
-        return [];
+      return [];
     });
     let users = query.findAll();
     assert.typeOf(users, 'array');

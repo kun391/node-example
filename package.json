@@ -3,23 +3,29 @@
   "version": "1.0.1",
   "description": "Example node module with unit test and CI",
   "author": "Thanh Nguyen <nguyentruongthanh.dn@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kun391/node-example"
+  },
+  "keywords": [
+    "query",
+    "example",
+    "node"
+  ],
   "private": false,
   "scripts": {
     "start": "node .",
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec  --recursive --timeout 5000"
-  },
-  "dependencies": {
-    "lodash": "^4.16.1"
+    "lint": "eslint .",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.14",
     "eslint": "^3.4.0",
-    "faker": "^3.1.0",
     "istanbul": "^0.4.5",
     "js-beautify": "^1.6.4",
     "mocha": "^3.0.2",
-    "rosie": "^1.6.0",
     "sinon": "^1.17.6"
   }
 }
