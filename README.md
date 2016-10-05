@@ -6,6 +6,8 @@
 [![Download Status](https://img.shields.io/npm/dt/node-query-example.svg)](https://www.npmjs.com/package/node-query-example)
 [![License](https://img.shields.io/github/license/kun391/node-example.svg)](https://github.com/kun391/node-example/blob/master/LICENSE)
 
+## Requirement
+- Node 6
 
 ## Install
 
