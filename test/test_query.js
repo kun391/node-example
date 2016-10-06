@@ -58,7 +58,7 @@ describe('function findById working ok', () => {
   });
   it('return no data with hasOwnProperty false', (done) => {
     let x = {}.hasOwnProperty;
-    sinon.stub(x, 'call', (data ,i) => {
+    sinon.stub(x, 'call', () => {
       return false;
     });
     let user = query.findById('57e251e1d08c1dbfdf220a07');
@@ -79,7 +79,7 @@ describe('function findById working ok', () => {
     done();
   });
   it('return no data', (done) => {
-    sinon.stub(query, 'readData', (file) => {
+    sinon.stub(query, 'readData', () => {
       return [];
     });
     let users = query.findAll();

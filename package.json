@@ -1,6 +1,6 @@
 {
   "name": "node-query-example",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Example node module with unit test and CI",
   "author": "Thanh Nguyen <nguyentruongthanh.dn@gmail.com>",
   "license": "MIT",
